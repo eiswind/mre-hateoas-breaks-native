@@ -1,0 +1,16 @@
+= MRE Hateoas breaks native build
+
+This example works with spring boot 3.0.5
+
+On 3.0.6 it fails with
+
+----
+ com.oracle.svm.core.util.VMError$HostedError: Registering type as reachable after analysis: AnalysisType<org.springframework.plugin.core.Plugin[]
+----
+
+try running
+
+----
+./m
+nw  -P nativeTest  clean test
+----
